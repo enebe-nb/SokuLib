@@ -4,9 +4,12 @@
 
 #include "SokuAddresses.hpp"
 #include "BattleManager.hpp"
+#include "SokuFct.hpp"
 
 namespace SokuLib
 {
+	void (__thiscall CharacterManager::* const CharacterManager_PlaySE)(int id) = union_cast<void (CharacterManager::*)(int)>(ADDR_PLAY_SE_CHARACTER);
+
 	BattleManager &getBattleMgr()
 	{
 		return **reinterpret_cast<BattleManager **>(ADDR_BATTLE_MANAGER);

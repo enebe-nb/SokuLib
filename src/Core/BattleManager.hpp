@@ -51,6 +51,8 @@ namespace SokuLib
 		// 0x852
 	};
 
+	extern void (__thiscall CharacterManager::* const CharacterManager_PlaySE)(int id);
+
 	struct BattleManager {
 		char unknown[0xC];
 		CharacterManager &leftCharacterManager;
