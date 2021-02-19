@@ -6,14 +6,11 @@
 #define SOKULIB_SOUNDMANAGER_HPP
 
 
-#include <Windows.h>
-
 namespace SokuLib
 {
 	// SE�Đ�
 	extern void (* const playSEWaveBuffer)(int id);
 	extern void (* const playNetBell)(int id);
-	void playSECharacter(DWORD charAddr, int id);
 }
 
 
