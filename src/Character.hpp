@@ -12,6 +12,7 @@
 #include "Stack.hpp"
 #include "InputManager.hpp"
 #include "SokuAddresses.hpp"
+#include "Deque.hpp"
 
 namespace SokuLib
 {
@@ -63,8 +64,8 @@ namespace SokuLib
 		unsigned char palette;
 		unsigned char padding2;
 		unsigned char deck;
-		Dequeue<unsigned short> effectiveDeck;
-		KeyManager **keyManager;
+		Deque<unsigned short> effectiveDeck;
+		KeyManager *keyManager;
 	};
 
 	struct GameStartParams {

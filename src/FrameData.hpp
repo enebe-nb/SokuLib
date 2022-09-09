@@ -160,15 +160,14 @@ namespace SokuLib
 
 		class FrameData {
 		public:
-			enum RenderGroup : unsigned char {
-				NONE = 0, SPRITE = 1, TEXTURE = 2, WITHBLEND = 3 };
+			enum RenderGroup : unsigned char { SPRITE = 0, TEXTURE = 1, WITHBLEND = 2 };
 
 			Vector2<short> offset = {0, 0};
 			short duration = 0;
 			short texIndex = 0;
 			Vector2<short> texOffset = {0, 0};
 			Vector2<short> texSize = {0, 0};
-			RenderGroup renderGroup = NONE;
+			RenderGroup renderGroup = SPRITE;
 			// align 0x3
 			BlendOptions* blendOptionsPtr = 0;
 

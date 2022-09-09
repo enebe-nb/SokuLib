@@ -9,18 +9,15 @@
 
 namespace SokuLib
 {
-	// �l�b�g�ΐ펞�v���t�@�C�����\���֐����Ăяo���Ă���A�h���X
 	char (&getProfile1NamePrintCode)[ADDR_PROFILENAME_PRINT_CODE1_END - ADDR_PROFILENAME_PRINT_CODE1]
 		= *reinterpret_cast<char (*)[ADDR_PROFILENAME_PRINT_CODE1_END - ADDR_PROFILENAME_PRINT_CODE1]>(ADDR_PROFILENAME_PRINT_CODE1);
 
 	char (&getProfile2NamePrintCode)[ADDR_PROFILENAME_PRINT_CODE2_END - ADDR_PROFILENAME_PRINT_CODE2]
 		= *reinterpret_cast<char (*)[ADDR_PROFILENAME_PRINT_CODE2_END - ADDR_PROFILENAME_PRINT_CODE2]>(ADDR_PROFILENAME_PRINT_CODE2);
 
-	// �e�N�X�`���}�l�[�W��
 	// CHandleManager<IDirect3DTexture *>
 	TextureManager &textureMgr = *reinterpret_cast<TextureManager *>(ADDR_TEXTURE_MANAGER);
 
-	// Direct3D�f�o�C�X
 	// IDirect3DDevice9*
 	IDirect3DDevice9 *(&pd3dDev) = *reinterpret_cast<IDirect3DDevice9 **>(ADDR_D3D9_DEVICE);
 
